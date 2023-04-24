@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 555841018285145986}
   - component: {fileID: 8228412966316936187}
   - component: {fileID: 6716984173360899673}
+  - component: {fileID: 4000816424037787801}
   m_Layer: 0
   m_Name: Obstacle_1
   m_TagString: Untagged
@@ -40,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6716984173360899674}
-  m_Mesh: {fileID: 744933921351850280, guid: 7b312d241368b794186a7a7d861b2522, type: 3}
+  m_Mesh: {fileID: 744933921351850280, guid: a7dbcbfe973d6e143b6b191c21b97b64, type: 3}
 --- !u!23 &8228412966316936187
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -60,8 +61,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5635484798206224817, guid: 7b312d241368b794186a7a7d861b2522, type: 3}
-  - {fileID: -5209386559919585115, guid: 7b312d241368b794186a7a7d861b2522, type: 3}
+  - {fileID: 2100000, guid: 58d103f1652c02242bdf11bed39fdcdd, type: 2}
+  - {fileID: 2100000, guid: d0d35eae85efc8741affd3ddf719b833, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -102,3 +103,17 @@ MonoBehaviour:
   startPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
   LRDuration: 0
+--- !u!64 &4000816424037787801
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6716984173360899674}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 744933921351850280, guid: a7dbcbfe973d6e143b6b191c21b97b64, type: 3}
