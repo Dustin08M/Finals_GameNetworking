@@ -8,6 +8,10 @@ TagManager:
   - Obstacle
   - Collectible
   - BodyPart
+  - Missile
+  - Bullet
+  - Obstacles
+  - SpawnTrigger
   layers:
   - Default
   - TransparentFX

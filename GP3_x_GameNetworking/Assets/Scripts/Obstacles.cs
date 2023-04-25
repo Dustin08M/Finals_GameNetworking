@@ -30,4 +30,10 @@ public class Obstacles : MonoBehaviour
     {
         transform.DOLocalMove(startPosition, LRDuration).OnComplete(() => StartMovement()).SetEase(Ease.Linear);
     }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.CompareTag("Player"))
+        { Time.timeScale = 0; }
+    }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CoinCollect : MonoBehaviour
 {
+    public float turnSpeed = 90f;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,12 +14,16 @@ public class CoinCollect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(0, 0, turnSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        { Destroy(gameObject); }
+        //another if statement to check if the coin will collide with an obstacle
+        if (other.gameObject.name != "Player") //check that the object collided is the player
+        { return; }
+        //Add to player's coin ui
+
+        Destroy(gameObject);//destroy coin
     }
 }
