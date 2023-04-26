@@ -13,6 +13,7 @@ public class Obstacles : MonoBehaviour
     public Vector3 startPosition;
     public Vector3 endPosition;
     public float LRDuration;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,11 @@ public class Obstacles : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
+        if (col.gameObject.GetComponent<Obstacles>() != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
         if (col.CompareTag("Player"))
         { Time.timeScale = 0; }
     }

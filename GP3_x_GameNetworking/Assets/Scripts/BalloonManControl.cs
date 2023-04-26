@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BalloonManControl : MonoBehaviour
 {
+    bool alive = true;
+
     private CharacterController controller;
     public float moveSpeed = 5f;
 
@@ -19,5 +21,18 @@ public class BalloonManControl : MonoBehaviour
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, moveSpeed);
 
         controller.Move(move * Time.deltaTime * moveSpeed);
+    }
+
+    void FixedUpdate()
+    {
+        if (!alive)
+        { return; }
+    }
+
+    public void Die()
+    {
+        alive = false;
+        Time.timeScale = 0;
+        //other lose functions
     }
 }

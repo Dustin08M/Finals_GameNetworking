@@ -18,8 +18,8 @@ public class FollowPlayer : MonoBehaviour
     {
         Vector3 FixedDirection = Player.position + offset;
         Vector3 SmoothedPosition = Vector3.Lerp(transform.position, FixedDirection, SmoothFollow);
+        
         transform.position = SmoothedPosition;
-
         transform.LookAt(Player);
     }
 }

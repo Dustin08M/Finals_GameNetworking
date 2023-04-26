@@ -260,7 +260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &715215120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -355,7 +355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &773781246
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -450,7 +450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1172937125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -605,13 +605,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746937339}
-  m_LocalRotation: {x: 0.19328621, y: -0, z: -0, w: 0.98114246}
-  m_LocalPosition: {x: 0.7, y: 3.16, z: -2.71}
+  m_LocalRotation: {x: 0.1273243, y: 0, z: 0, w: 0.99186116}
+  m_LocalPosition: {x: 0, y: 3.1, z: 2.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 22.289, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 14.63, y: 0, z: 0}
 --- !u!114 &1746937343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 760814667603075366}
   SmoothFollow: 0.125
-  offset: {x: -0.085, y: 3.11, z: -5.76}
+  offset: {x: 0, y: 2.6, z: -5.88}
 --- !u!1 &1808101320
 GameObject:
   m_ObjectHideFlags: 0
@@ -7535,7 +7535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1652746388124835371, guid: 51fc127cf78cf76479dc033ad8095c72, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2.764
       objectReference: {fileID: 0}
     - target: {fileID: 1652746388124835371, guid: 51fc127cf78cf76479dc033ad8095c72, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7571,7 +7571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2135951668549633168, guid: 51fc127cf78cf76479dc033ad8095c72, type: 3}
       propertyPath: moveSpeed
-      value: 2.5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 2135951668549633169, guid: 51fc127cf78cf76479dc033ad8095c72, type: 3}
       propertyPath: m_Name

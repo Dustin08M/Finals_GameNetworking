@@ -20,6 +20,11 @@ public class CoinCollect : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //another if statement to check if the coin will collide with an obstacle
+        if (other.gameObject.GetComponent<Obstacles>() != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
         if (other.gameObject.name != "Player") //check that the object collided is the player
         { return; }
         //Add to player's coin ui
