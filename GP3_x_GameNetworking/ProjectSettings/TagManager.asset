@@ -12,6 +12,8 @@ TagManager:
   - Bullet
   - Obstacles
   - SpawnTrigger
+  - ObstacleSpawner
+  - Coin
   layers:
   - Default
   - TransparentFX

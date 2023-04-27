@@ -5,6 +5,7 @@ using UnityEngine;
 public class CoinCollect : MonoBehaviour
 {
     public float turnSpeed = 90f;
+    bool CoinGrabbed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,14 @@ public class CoinCollect : MonoBehaviour
             return;
         }
         if (other.gameObject.name != "Player") //check that the object collided is the player
-        { return; }
+        {
+            if (other.CompareTag("Player") && CoinGrabbed)
+            {
+                PlayerTracker.instance.CountCoinsCollected();
+                CoinGrabbed = true;
+            }
+         return;
+        }
         //Add to player's coin ui
 
         Destroy(gameObject);//destroy coin

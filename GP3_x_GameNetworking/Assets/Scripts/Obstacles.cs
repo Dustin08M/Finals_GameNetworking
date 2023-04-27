@@ -39,6 +39,7 @@ public class Obstacles : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
         if (col.CompareTag("Player"))
         { Time.timeScale = 0; }
     }
