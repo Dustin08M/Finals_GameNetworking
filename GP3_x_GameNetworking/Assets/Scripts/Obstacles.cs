@@ -13,7 +13,6 @@ public class Obstacles : MonoBehaviour
     public Vector3 startPosition;
     public Vector3 endPosition;
     public float LRDuration;
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -32,15 +31,11 @@ public class Obstacles : MonoBehaviour
         transform.DOLocalMove(startPosition, LRDuration).OnComplete(() => StartMovement()).SetEase(Ease.Linear);
     }
 
-    void OnTriggerEnter(Collider col)
+    private void OnTriggerEnter(Collider other)
     {
-        if (col.gameObject.GetComponent<Obstacles>() != null)
+        if (other.CompareTag("Player"))
         {
-            Destroy(gameObject);
-            return;
-        }
 
-        if (col.CompareTag("Player"))
-        { Time.timeScale = 0; }
+        }
     }
 }

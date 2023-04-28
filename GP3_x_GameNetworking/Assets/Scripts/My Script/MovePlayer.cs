@@ -6,8 +6,7 @@ public class MovePlayer : MonoBehaviour
 {
     private CharacterController controller;
     public float moveSpeed = 10;
-
-    private float timer = 0f; //checker
+    private float TimeCounter = 0;
 
     float PosX;
     // Start is called before the first frame update
@@ -19,20 +18,14 @@ public class MovePlayer : MonoBehaviour
     // Update is called once per frame
     void Update() //A-D controller
     {
-
-        timer += Time.deltaTime;
-
-        if (timer >= 30f) //for every 30 seconds, it adds an extra speed
+        TimeCounter += Time.deltaTime;
+        if (TimeCounter > 30f)
         {
             moveSpeed += 0.5f;
             Debug.Log("Speed Increased");
-            timer = 0.0f; //resets the timer, therefore checking it again
+            TimeCounter = 0f;
         }
-
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, moveSpeed);
         controller.Move(move * Time.deltaTime * moveSpeed);
     }
 }
-
-
-//Script is provided by Raid Shadow Legends ® 2023

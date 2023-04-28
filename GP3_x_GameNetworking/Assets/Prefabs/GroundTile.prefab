@@ -221,9 +221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefabs:
-  - {fileID: 6716984173360899674, guid: 962b7f5054007284097d8650c41f4eb9, type: 3}
   - {fileID: 1359556954850000414, guid: c21a7a2dabed8c741b3acce0773cf0bd, type: 3}
-  - {fileID: 8498355762115463732, guid: 8b9bf26a75fdce740ae5d02d5ef6d77c, type: 3}
+  - {fileID: 6716984173360899674, guid: 962b7f5054007284097d8650c41f4eb9, type: 3}
   coinPrefab: {fileID: 5983346349127766424, guid: 8412e37bdb7fd7346b604c19c889feaa, type: 3}
   SpawnPoints:
   - {fileID: 2919307656280803305}
@@ -231,7 +230,6 @@ MonoBehaviour:
   - {fileID: 4312334218440582600}
   ObstaclePrefabs:
   - {fileID: 8937550755966548777, guid: ba1726e82e39570429e15d24af05aba7, type: 3}
-  - {fileID: 4708919396130405392, guid: b7efd3eca609ccf44aa91742eec666ae, type: 3}
   - {fileID: 8937550755966548777, guid: ba1726e82e39570429e15d24af05aba7, type: 3}
 --- !u!1 &2579164700233555059
 GameObject:
