@@ -21,7 +21,9 @@ public class GroundTile : MonoBehaviour
     }
 
     [SerializeField] private List<GameObject> obstaclePrefabs;
-
+    [SerializeField] private GameObject[] ObstaclePrefabs;
+    [SerializeField] private GameObject[] SpawnPoints = new GameObject[3];
+    
     void SpawnObstacles()
     {   
         //choose a random point to spawn obstacles
@@ -33,6 +35,17 @@ public class GroundTile : MonoBehaviour
         Instantiate(obstaclePrefabs[obstacleIndex], spawnPoint.position, Quaternion.identity, transform);
     }
 
+    void PickAndSpawnObj()
+    {
+        int SpawnIndex_SpawnPnts = Random.Range(0, SpawnPoints.Length); //For choosing spawnPoints;
+        GameObject AreaToSpawn = SpawnPoints[SpawnIndex_SpawnPnts]; // The spawnpoint to choose when instantiating a randomly chosen object
+        int SpawnIndex_Obstacle = Random.Range(0, ObstaclePrefabs.Length); //For picking variety of objs;
+        GameObject ObjToSpawn = ObstaclePrefabs[SpawnIndex_Obstacle];// The obstacle to spawn on a chosen spawnpoint
+
+        GameObject SpawnObjToSpawnPoint = Instantiate(ObjToSpawn, AreaToSpawn.transform.position, Quaternion.identity);
+
+    }
+    
     public GameObject coinPrefab;
     void SpawnCoins()
     {
@@ -62,16 +75,5 @@ public class GroundTile : MonoBehaviour
         return point;
     }
 
-    [SerializeField] private GameObject[] SpawnPoints = new GameObject[3];
-    [SerializeField] private GameObject[] ObstaclePrefabs;
-    void PickAndSpawnObj()
-    {
-        int SpawnIndex_SpawnPnts = Random.Range(0, SpawnPoints.Length); //For choosing spawnPoints;
-        GameObject AreaToSpawn = SpawnPoints[SpawnIndex_SpawnPnts]; // The spawnpoint to choose when instantiating a randomly chosen object
-        int SpawnIndex_Obstacle = Random.Range(0, ObstaclePrefabs.Length); //For picking variety of objs;
-        GameObject ObjToSpawn = ObstaclePrefabs[SpawnIndex_Obstacle];// The obstacle to spawn on a chosen spawnpoint
-
-        GameObject SpawnObjToSpawnPoint = Instantiate(ObjToSpawn, AreaToSpawn.transform.position, Quaternion.identity);
-
-    }
+    
 }

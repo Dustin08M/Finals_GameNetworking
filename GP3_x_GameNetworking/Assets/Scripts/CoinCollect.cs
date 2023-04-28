@@ -6,6 +6,7 @@ public class CoinCollect : MonoBehaviour
 {
     public float turnSpeed = 90f;
     bool CoinGrabbed = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +36,9 @@ public class CoinCollect : MonoBehaviour
             }
          return;
         }
-        //Add to player's coin ui
+        //Add to player's coin 
+        GameManager.inst.IncrementCoins();
+        PlayerTracker.instance.CountCoinsCollected();
 
         Destroy(gameObject);//destroy coin
     }

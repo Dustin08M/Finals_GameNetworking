@@ -13,6 +13,8 @@ public class Obstacles : MonoBehaviour
     public Vector3 startPosition;
     public Vector3 endPosition;
     public float LRDuration;
+
+    public GameManager gameOverScreen;
     
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,9 @@ public class Obstacles : MonoBehaviour
         }
 
         if (col.CompareTag("Player"))
-        { Time.timeScale = 0; }
+        {
+            Time.timeScale = 0;
+            //Add SetActive GameOverUI
+        }
     }
 }
